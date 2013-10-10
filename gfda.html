@@ -1,14 +1,12 @@
 <html>
 <head>
 
-<script src="//use.typekit.net/zwn0byu.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-
 <script src="advices.js"></script>
 
 
 <style>
     body {
+        font-family: Helvetica Neue, Helvetica;
     }
 
     body > img {
@@ -16,24 +14,26 @@
     }
 
     section{
-        width: 1200px;
-        margin:40px auto 0;
+        width: 80%;
+        padding:30px;
     }
 
 
     h1{
-        font-size: 134px;
+        font-size: 105px;
         font-weight: 700;
         height: 411px;
         letter-spacing: -4px;
-        line-height: 137px;
+        line-height: 105px;
         margin-bottom: 0px;
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 0px;
         min-height: 411px;
         white-space: normal;
-        word-spacing: -25.5px;
+        word-spacing: -10px;
+        border-top:0px solid #fff;
+        padding-top:10px;
     }
 
     h3 {
@@ -41,23 +41,34 @@
         font-weight: 700;
         margin: 0.8em 0 0.8em 0.35em;
         display: inline-block;
-        opacity: 0.8;
     }
 
     .theme0 {
         background: #ef483f; color:#ffffff;
     }
+    .theme0 h1 {
+        border-color: #ffffff;
+    }
 
     .theme1 {
         background: #f1f1f1; color:#2a2a2a;
     }
+    .theme1 h1 {
+        border-color: #2a2a2a;
+    }
 
     .theme2 {
-        background: #333333; color:#000000;
+        background: #222222; color:#ffffff;
+    }
+    .theme2 h1 {
+        border-color: #ffffff;
     }
 
     .theme3 {
-        background: #222222; color:#ffffff;
+        background: #333333; color:#000000;
+    }
+    .theme3 h1 {
+        border-color: #000000;
     }
 </style>
 </head>
@@ -68,9 +79,9 @@
 <h1></h1>
 <script>
     // get advice
-    var advice = advices[Math.floor(Math.random() * Object.keys(advices).length) + 1];
+    var advice = window.location.hash ? advices[window.location.hash.replace('#', '')] : advices[Math.floor(Math.random() * Object.keys(advices).length) + 1];
     // theme
-    document.querySelector('body').classList.add('theme' + Math.floor(Math.random() * 4));
+    document.querySelector('body').classList.add('theme' + Math.floor(Math.random() * 3));
     // id
     document.querySelector('h3 span').innerText = advice.id;
 
