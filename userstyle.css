@@ -1,0 +1,31 @@
+@-webkit-keyframes backgroundcolor
+{
+    0%   { background: #f1f1f1; color:#2a2a2a; }
+    24.999%   { background: #f1f1f1; color:#2a2a2a; }
+  
+    25%   { background: #333333; color:#000000; }
+    49.999%   { background: #333333; color:#000000; }
+    
+    50% { background: #222222; color:#ffffff; }
+    74% { background: #222222; color:#ffffff; }
+      
+    75% { background: #ef483f; color:#ffffff; }
+    100% { background: #ef483f; color:#ffffff; }
+}
+
+body, .id {
+  background: #ef483f; color:#ffffff;
+  --webkit-animation: backgroundcolor 5s linear 0 infinite;
+}
+
+.site-header, .site-aside, .site-footer,  .links {
+  display:none!important;
+}
+  
+.site-container {
+    padding-top: 40px;
+}
+    
+.content-container {
+    width:1200px;
+}
