@@ -3,69 +3,84 @@
 
 <script src="advices.js"></script>
 
-
 <style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     body {
-        font-family: Helvetica Neue, Helvetica;
+        font-family: "Haas Grot Disp";
+        text-rendering: optimizeLegibility;
+        /*background-image: url('GFDA_07W-1440x900.jpg');
+        background-image: url('screens/gfda-render-1.png');*/
     }
 
     body > img {
         position: fixed!important; top:-100px!important;
     }
 
-    section{
-        width: 80%;
-        padding:30px;
+    section {
+        /*width: 80%;*/
+        padding:100px;
+        overflow: hidden;
+        height: 100%;
     }
 
 
-    h1{
-        font-size: 105px;
+    h1 {
+        font-size: 124px;
+        line-height: 124px;
         font-weight: 700;
-        height: 411px;
-        letter-spacing: -4px;
-        line-height: 105px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        min-height: 411px;
+        letter-spacing: -1px;
+        margin: 0;
         white-space: normal;
-        word-spacing: -10px;
-        border-top:0px solid #fff;
-        padding-top:10px;
+        word-spacing: -1px;
+        height: 100%;
+        width: 100%;
+        padding:0 20% 0 0;
+        border-bottom:3px solid white;
     }
 
     h3 {
         font-size: 18px;
         font-weight: 700;
-        margin: 0.8em 0 0.8em 0.35em;
+        margin: 0 0 0 0;
         display: inline-block;
+        position: absolute;
+        bottom:40px;
     }
 
     .theme0 {
-        background: #ef483f; color:#ffffff;
+        background-color: #ef483f; color:#ffffff;
     }
     .theme0 h1 {
         border-color: #ffffff;
     }
 
     .theme1 {
-        background: #f1f1f1; color:#2a2a2a;
+        background-color: #f1f1f1; color:#2a2a2a;
     }
     .theme1 h1 {
         border-color: #2a2a2a;
     }
 
     .theme2 {
-        background: #222222; color:#ffffff;
+        background-color: #222222; color:#ffffff;
     }
     .theme2 h1 {
         border-color: #ffffff;
     }
 
     .theme3 {
-        background: #333333; color:#000000;
+        background-color: #333333; color:#000000;
     }
     .theme3 h1 {
         border-color: #000000;
